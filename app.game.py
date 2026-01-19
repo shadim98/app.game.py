@@ -2,9 +2,9 @@ import streamlit as st
 
 st.set_page_config(page_title="Treasure Island", page_icon="🏝️")
 
-# ---------- ASCII ART (LOCKED SHAPE) ----------
+# ---------- ASCII ART (SAFE STRING) ----------
 st.markdown(
-    """
+    '''
 <div style="overflow-x:auto; white-space:pre; font-family: monospace;">
 <pre>
 *******************************************************************************
@@ -23,7 +23,7 @@ st.markdown(
 *******************************************************************************
 </pre>
 </div>
-""",
+''',
     unsafe_allow_html=True,
 )
 
@@ -34,7 +34,7 @@ st.write("Your mission is to find the treasure.")
 if "stage" not in st.session_state:
     st.session_state.stage = 1
 
-# ---------- CALLBACK FUNCTIONS ----------
+# ---------- CALLBACKS ----------
 def go_left():
     st.session_state.stage = 2
 
